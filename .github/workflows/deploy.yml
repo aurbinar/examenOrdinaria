@@ -29,10 +29,7 @@ jobs:
           node-version: lts/*
 
       - name: Install step
-        run: "deno install -A"
-
-      - name: Build step
-        run: "deno task deploy"
+        run: "deno install deno.json"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
